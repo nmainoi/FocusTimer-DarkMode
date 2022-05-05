@@ -5,10 +5,11 @@
 }
 :root {
   font-size: 62.5%;
-  --bg-color: #e5e5e5;
+  --bg-color: #fff;
   --bg-button-color: #02799d;
   --text-color: #323238;
-  --button-color: #323238;
+  --button-selected-color: #323238;
+  --button-default-color:  #E1E1E6;
   --slider-default-color: #323238;
   --slider-selected-color: #ffffff;
 }
@@ -41,7 +42,10 @@ main {
 }
 .timer{
   margin-bottom: 5.2rem;
+  display: flex;
+  line-height: 14.8rem;
 }
+
 .timerButtons{
   display: flex;
   gap: 4rem;
@@ -50,19 +54,37 @@ main {
 button {
   border: none;
   background: transparent;
-  
+  cursor: pointer;
   }
 .themeControls {
   display: flex;
   align-items: center;
   height: auto;
   max-height: 5.4rem;
-  align-self: initial;
+  /* align-self: initial;
   justify-self: right;
   padding-top: clamp(1rem, 2.5rem, 6rem);
-  padding-right: clamp(1rem, 2.5rem, 6rem);
+  padding-right: clamp(1rem, 2.5rem, 6rem); */
 }
-.timer {
-  display: flex;
-  line-height: 14.8rem;
+
+.soundControls{
+  display: grid;
+  grid-template-areas: "A B" "C D";
+  gap: 3.2rem;
+}
+.soundControls button{
+  background-color: var(--button-default-color);
+  border-radius: 24px;
+  width: 13.8rem;
+  height:  15.2rem;
+}
+@media (max-width: 1050px){
+main{
+  flex-direction: column;
+  align-items: center;
+}
+.TimeControls{
+  margin: 0 0 6rem 0;
+
+}
 }

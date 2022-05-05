@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  --bg-color: #e5e5e5;
+  --bg-button-color: #02799d;
+  --text-color: #323238;
+  --button-color: #323238;
+  --slider-default-color: #323238;
+  --slider-selected-color: #ffffff;
+}
+.hide {
+  display: none;
+}
+
+body {
+  background: var(--bg-color);
+  display: grid;
+  grid-template-areas: "A B";
+
+  font-family: "Roboto", sans-serif;
+  font-size: 12.6rem;
+  min-height: 100vh;
+}
+main {
+  display: flex;
+  align-self: center;
+  justify-self: right;
+}
+
+.TimeControls {
+  display: flex;
+  flex-flow: column;
+  align-self: center;
+  margin-right: 20rem;
+  width: auto;
+  max-width: 32.1rem;
+}
+.timer{
+  margin-bottom: 5.2rem;
+}
+.timerButtons{
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+button {
+  border: none;
+  background: transparent;
+  
+  }
+.themeControls {
+  display: flex;
+  align-items: center;
+  height: auto;
+  max-height: 5.4rem;
+  align-self: initial;
+  justify-self: right;
+  padding-top: clamp(1rem, 2.5rem, 6rem);
+  padding-right: clamp(1rem, 2.5rem, 6rem);
+}
+.timer {
+  display: flex;
+  line-height: 14.8rem;
+}

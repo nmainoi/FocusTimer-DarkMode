@@ -39,6 +39,7 @@ main {
   margin-right: 20rem;
   width: auto;
   max-width: 32.1rem;
+  align-items: center;
 }
 .timer{
   margin-bottom: 5.2rem;
@@ -56,17 +57,11 @@ button {
   background: transparent;
   cursor: pointer;
   }
-.themeControls {
-  display: flex;
-  align-items: center;
-  height: auto;
-  max-height: 5.4rem;
-  /* align-self: initial;
-  justify-self: right;
-  padding-top: clamp(1rem, 2.5rem, 6rem);
-  padding-right: clamp(1rem, 2.5rem, 6rem); */
-}
 
+button svg {
+  /* max-width: 4.8rem;
+  max-height: 4.8rem; */
+}
 .soundControls{
   display: grid;
   grid-template-areas: "A B" "C D";
@@ -77,6 +72,10 @@ button {
   border-radius: 24px;
   width: 13.8rem;
   height:  15.2rem;
+}
+ svg path{
+  fill: var( --text-color);
+
 }
 @media (max-width: 1050px){
 main{

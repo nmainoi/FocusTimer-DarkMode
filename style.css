@@ -6,30 +6,43 @@
 :root {
   font-size: 62.5%;
   --bg-color: #fff;
-  --bg-button-color: #02799d;
+
   --text-color: #323238;
-  --button-selected-color: #323238;
+  --button-selected-color: #02799D;
   --button-default-color:  #E1E1E6;
   --slider-default-color: #323238;
-  --slider-selected-color: #ffffff;
+  --slider-selected-color: #ffffffe5;
 }
 .hide {
   display: none;
 }
 
+.select svg path{
+  fill: var(--slider-selected-color);
+}
 body {
-  background: var(--bg-color);
-  display: grid;
-  grid-template-areas: "A B";
-
+display: flex;
+flex-direction: column;
+align-items: center;
   font-family: "Roboto", sans-serif;
   font-size: 12.6rem;
   min-height: 100vh;
 }
+.header{
+  width: 100%;
+  max-width: 100.7rem;
+  display: flex;
+  justify-content: flex-end;
+  height: 22rem;
+}
+.header svg{
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
 main {
   display: flex;
-  align-self: center;
-  justify-self: right;
+  width: 100%;
+max-width: 82.6rem;
 }
 
 .TimeControls {
@@ -58,10 +71,7 @@ button {
   cursor: pointer;
   }
 
-button svg {
-  /* max-width: 4.8rem;
-  max-height: 4.8rem; */
-}
+
 .soundControls{
   display: grid;
   grid-template-areas: "A B" "C D";
@@ -73,9 +83,11 @@ button svg {
   width: 13.8rem;
   height:  15.2rem;
 }
+.selected{
+background-color: var( --button-selected-color);
+}
  svg path{
   fill: var( --text-color);
-
 }
 @media (max-width: 1050px){
 main{
@@ -84,6 +96,15 @@ main{
 }
 .TimeControls{
   margin: 0 0 6rem 0;
-
+}
+.header{
+  width: 100%;
+  max-width: 30.7rem;
+  display: flex;
+  justify-content: flex-end;
+  height: 10rem;
+}
+.header svg{
+  margin: 15 0;
 }
 }

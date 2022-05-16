@@ -1,3 +1,15 @@
+import {
+  buttonPause,
+  buttonPlay,
+  buttonStop,
+  buttonAddTime,
+  buttonRemoveTime,
+  buttonNatureTheme,
+  buttonRainTheme,
+  buttonPeopleTheme,
+  buttonFireTheme,
+} from "./elements.js";
+
 export default function () {
   const buttonPressAudio = new Audio(
     "https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true"
@@ -30,6 +42,9 @@ export default function () {
     audioStop();
     return false;
   }
+
+
+
   function audioStart(element) {
 
     let boolNeedToPause = songAlreadyPlaing(element);
@@ -43,18 +58,30 @@ export default function () {
       case "FLOREST":
         bgAudio = new Audio(florestAudio);
         bgAudio.audio = florestAudio
+        buttonNatureTheme.style.backgroundColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--button-selected-color');
+        buttonNatureTheme.classList.add('select')
         break;
       case "RAIN":
         bgAudio = new Audio(rainAudio);
         bgAudio.audio = rainAudio
+        buttonRainTheme.style.backgroundColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--button-selected-color');
+        buttonRainTheme.classList.add('select')
         break;
       case "PEOPLE":
         bgAudio = new Audio(peopleAudio);
         bgAudio.audio = peopleAudio
+        buttonPeopleTheme.style.backgroundColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--button-selected-color');
+        buttonPeopleTheme.classList.add('select')
         break;
       case "FIRE":
         bgAudio = new Audio(fireAudio);
         bgAudio.audio = fireAudio
+        buttonFireTheme.style.backgroundColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--button-selected-color');
+        buttonFireTheme.classList.add('select')
         break;
       default:
         break;

@@ -9,7 +9,11 @@ import {
   minutesDisplay,
   secondsDisplay,
   buttonAddTime,
-  buttonRemoveTime
+  buttonRemoveTime,
+  buttonNatureTheme,
+  buttonRainTheme,
+  buttonPeopleTheme,
+  buttonFireTheme,
 } from "./elements.js"
 
 const controls = Controls({
@@ -18,6 +22,10 @@ const controls = Controls({
   buttonStop,
   buttonAddTime,
   buttonRemoveTime,
+  buttonNatureTheme,
+  buttonRainTheme,
+  buttonPeopleTheme,
+  buttonFireTheme,
 })
 
 const timer = Timer({

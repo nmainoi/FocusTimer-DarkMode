@@ -40,17 +40,21 @@ export default function ({ controls, timer, sound }) {
   });
 
   buttonNatureTheme.addEventListener("click", function () {
+    controls.resetSound();
     sound.audioStart("FLOREST");
   });
 
   buttonFireTheme.addEventListener("click", function () {
+    controls.resetSound();
     sound.audioStart("FIRE");
   });
 
   buttonRainTheme.addEventListener("click", function () {
+    controls.resetSound();
     sound.audioStart("RAIN");
   });
   buttonPeopleTheme.addEventListener("click", function () {
+    controls.resetSound();
     sound.audioStart("PEOPLE");
   });
 

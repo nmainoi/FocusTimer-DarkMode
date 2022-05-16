@@ -10,7 +10,7 @@ const buttonRemoveTime = document.querySelector('.removeTime')
 
 const buttonNatureTheme = document.querySelector('.natureTheme')
 const buttonRainTheme = document.querySelector('.rainTheme')
-const buttonPeopleTheme = document.querySelector('.rainTheme')
+const buttonPeopleTheme = document.querySelector('.peopleTheme')
 const buttonFireTheme = document.querySelector('.fireTheme')
 
 

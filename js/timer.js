@@ -8,7 +8,7 @@ export default function Timer({
 }) {
 
   let timerTimeOut
-  let minutes = Number(minutesDisplay.textContent)
+  let minutes = 25
 
   function updateDisplay(newMinutes, seconds) {
   
@@ -18,11 +18,15 @@ export default function Timer({
     secondsDisplay.textContent = String(seconds).padStart(2, "0")
   }
 function addMinutes(NewMinutes){
+  if(minutes + Number(NewMinutes) >= 99)
+  return;
 minutes = minutes + Number(NewMinutes);
 updateDisplay(minutes, 0)
 }
 
 function removeMinutes(NewMinutes){
+  if((minutes - Number(NewMinutes)) <= 0)
+  return;
   minutes = minutes - Number(NewMinutes);
   updateDisplay(minutes, 0)
   }

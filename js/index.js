@@ -14,6 +14,8 @@ import {
   buttonRainTheme,
   buttonPeopleTheme,
   buttonFireTheme,
+  buttonLigthMode,
+  buttonDarkMode
 } from "./elements.js"
 
 const controls = Controls({
@@ -26,6 +28,8 @@ const controls = Controls({
   buttonRainTheme,
   buttonPeopleTheme,
   buttonFireTheme,
+  buttonLigthMode,
+  buttonDarkMode
 })
 
 const timer = Timer({

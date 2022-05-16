@@ -6,19 +6,17 @@ export default function Controls({
   buttonRainTheme,
   buttonPeopleTheme,
   buttonFireTheme,
+  buttonLigthMode,
+  buttonDarkMode
 }) {
 
+function resetInjectedBG(){
+
+}
 
 function resetSound(){
-  buttonNatureTheme.style.backgroundColor = getComputedStyle(document.documentElement)
-  .getPropertyValue('--button-default-color');
-  buttonRainTheme.style.backgroundColor = getComputedStyle(document.documentElement)
-  .getPropertyValue('--button-default-color');
-  buttonPeopleTheme.style.backgroundColor = getComputedStyle(document.documentElement)
-  .getPropertyValue('--button-default-color');
-  buttonFireTheme.style.backgroundColor = getComputedStyle(document.documentElement)
-  .getPropertyValue('--button-default-color');
 
+  resetInjectedBG()
   buttonNatureTheme.classList.remove('select')
   buttonRainTheme.classList.remove('select')
   buttonPeopleTheme.classList.remove('select')
@@ -41,6 +39,33 @@ function resetSound(){
     buttonPause.classList.add('hide')
   }
 
+function setLigthMode(){
+  buttonLigthMode.classList.remove('hide')
+  buttonDarkMode.classList.add('hide')
+
+  document.documentElement.style.setProperty('--bg-color', 'white')
+  document.documentElement.style.setProperty('--text-color', '#323238')  
+  document.documentElement.style.setProperty('--button-selected-color', '#02799D') 
+  document.documentElement.style.setProperty('--button-default-color', '#E1E1E6')  
+  document.documentElement.style.setProperty('--slider-default-color', '#323238') 
+  document.documentElement.style.setProperty('--slider-selected-color', '#ffffffe5')  
+  resetInjectedBG()
+} 
+  
+function setDarkMode(){
+
+  buttonLigthMode.classList.add('hide')
+  buttonDarkMode.classList.remove('hide')
+
+  document.documentElement.style.setProperty('--bg-color', 'black')
+  document.documentElement.style.setProperty('--text-color', '#FFFFFF')  
+  document.documentElement.style.setProperty('--button-selected-color', '#0A3442') 
+  document.documentElement.style.setProperty('--button-default-color', '#29292E')  
+  document.documentElement.style.setProperty('  --slider-default-color', '#ffffffe5') 
+  document.documentElement.style.setProperty('--slider-selected-color', '#ffffffe5')  
+  resetInjectedBG()
+}
+  
   function getMinutes() {
     let newMinutes = prompt('Quantos minutos?')
     if (!newMinutes) {
@@ -55,6 +80,8 @@ function resetSound(){
     play,
     pause,
     getMinutes,
-    resetSound
+    resetSound,
+    setDarkMode,
+    setLigthMode
   }
 }

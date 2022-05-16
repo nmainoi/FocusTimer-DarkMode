@@ -8,6 +8,8 @@ import {
   buttonRainTheme,
   buttonPeopleTheme,
   buttonFireTheme,
+  buttonLigthMode,
+  buttonDarkMode
 } from "./elements.js";
 
 export default function ({ controls, timer, sound }) {
@@ -58,4 +60,11 @@ export default function ({ controls, timer, sound }) {
     sound.audioStart("PEOPLE");
   });
 
+  buttonLigthMode.addEventListener("click", function(){
+    controls.setDarkMode();
+  })
+  
+  buttonDarkMode.addEventListener("click", function(){
+    controls.setLigthMode();
+  })
 }

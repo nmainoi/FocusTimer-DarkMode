@@ -13,6 +13,8 @@ const buttonRainTheme = document.querySelector('.rainTheme')
 const buttonPeopleTheme = document.querySelector('.peopleTheme')
 const buttonFireTheme = document.querySelector('.fireTheme')
 
+const buttonLigthMode = document.querySelector('.ligth-mode')
+const buttonDarkMode = document.querySelector('.dark-mode')
 
 export {
   buttonPlay,
@@ -26,4 +28,6 @@ export {
   buttonRainTheme,
   buttonPeopleTheme,
   buttonFireTheme,
+  buttonLigthMode,
+  buttonDarkMode
 }
